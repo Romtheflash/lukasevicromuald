@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+	  <style type="text/css">
+            p {
+                font-size: 24px;
+                font-weight: bold;
+				font-family: Helvetica, Arial, sans-serif;
+            }
+        </style>
 		<meta charset="utf-8">
 		<title>D3 Page Template</title>
 		<script type="text/javascript" src="../d3.js"></script>
 	</head>
 	<body>
 		<script type="text/javascript">
-			var dataset = [ 5 , 10, 15, 20, 25 ]
+			var dataset = [ 5 , 10, 15, 20, 25 ];
 			d3.select("body").selectAll("p")
 				.data(dataset)
 				.enter()
 				.append("p")
-				.text(function(d) { return "I can lift the box " + d + " times"; })
+				.text(function(d) { return "I can lift the box " + d + " times"; 
+				})
 				.style("color", function(d) {
 					if(d>15){
 						return "red";
@@ -22,4 +30,4 @@
 				});
 		</script>
 	</body>
-</html>
+</html>`
